@@ -22,3 +22,16 @@ document.addEventListener('DOMContentLoaded', function () {
     // Also check visibility on initial page load
     checkVisibility();
   });
+
+  function copyToClipboard(text) {
+    // Create a temporary input element to copy the text
+    const input = document.createElement('input');
+    input.value = text;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+  
+    // Optional: Show a notification that the text has been copied
+    alert('Copied to clipboard: ' + text);
+  }

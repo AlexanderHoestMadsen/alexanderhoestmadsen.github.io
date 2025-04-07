@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexander Høst-Madsen</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -22,30 +23,35 @@
   <main>
     <!-- Content Grid -->
     <div class="image-gallery">
-      <div class="image-item" href="#cv">
-        <div class="image-overlay">
-          <h3>CV</h3>
+      <a href="#cv">
+        <div class="image-item">
+          <div class="image-overlay">
+            <h3>CV</h3>
+          </div>
+          <img src="images/HøstStrand.jpg" alt="Image 1">
         </div>
-        <img src="images/HøstStrand.jpg" alt="Image 1">
-      </div>
-      <div class="image-item">
-        <div class="image-overlay">
-          <h3>Produktioner</h3>
+      </a>
+      <a href="#productions">
+        <div class="image-item">
+          <div class="image-overlay">
+            <h3>Produktioner</h3>
+          </div>
+          <img src="images/høsterDrikker.jpg" alt="Image 2">
         </div>
-        <img src="images/høsterDrikker.jpg" alt="Image 2">
-      </div>
-      <div class="image-item">
-        <div class="image-overlay">
-          <h3>Kontakt</h3>
+      </a>
+      <a href="#contact">
+        <div class="image-item">
+          <div class="image-overlay">
+            <h3>Kontakt</h3>
+          </div>
+          <img src="images/HøstSelfie.jfif" alt="Image 3">
         </div>
-        <img src="images/HøstSelfie.jfif" alt="Image 3">
-      </div>
+      </a>
     </div>
 
     <!-- Sections that will fade in -->
     <div id="cv" class="content-section">
       <h2>CV</h2>
-      <p>Min professionelle erfaring...</p>
       <iframe src="PDF/Høst-Madsen.pdf" width="50%" height="1190px">
         This browser does not support PDFs. Please download the PDF to view it: <a href="path/to/Høst-Madsen.pdf">Download PDF</a>
       </iframe>
@@ -56,7 +62,7 @@
       <!-- PDF Section with Thumbnails -->
     
     <h3>Artikler</h3>
-    <div class="pdf-files">
+    <div class="pdf-files" id="">
       
       <div class="pdf-item">
         <!-- Image thumbnail for the PDF -->
@@ -124,7 +130,21 @@
     </div>
     <div id="contact" class="content-section">
       <h2>Kontakt</h2>
-      <p>Kontaktinformation...</p>
+      <div class="contact-info">
+        <div class="contact-item" onclick="copyToClipboard('alexanderhmadsen@gmail.com')">
+          <i class="fas fa-envelope"></i> Email
+        </div>
+        <div class="contact-item" onclick="copyToClipboard('42587905')">
+          <i class="fas fa-phone-alt"></i> +45 42587905
+        </div>
+      
+        <a href="https://www.instagram.com/alexander_host71/" target="_blank" class="contact-item">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100002579336351" target="_blank" class="contact-item">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+      </div>
     </div>
   </main>
 

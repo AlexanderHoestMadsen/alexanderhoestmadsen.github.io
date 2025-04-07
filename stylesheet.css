@@ -64,6 +64,14 @@ body {
   max-width: 1200px;
 }
 
+/* Fix for images wrapped in <a> tag to maintain grid behavior */
+.image-gallery a {
+  display: block; /* Ensure that <a> tags take full space of the grid item */
+  width: 100%; /* Make <a> tag span the entire grid item */
+  height: 100%; /* Same for height */
+  text-decoration: none; /* Remove any underline from links */
+}
+
 /* Styling for each image item */
 .image-item {
   position: relative;
@@ -205,6 +213,49 @@ video {
 #cv iframe, #cv embed {
   border: none;
   border-radius: 10px;
+}
+
+/* Styling for the Contact Section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between contact items */
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Contact item styling */
+.contact-item {
+  font-size: 1.2rem;
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-item i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+/* Hover effect */
+.contact-item:hover {
+  color: #1e3a8a; /* Change color on hover */
+  transform: translateX(5px); /* Slide the icon a little */
+}
+
+/* For larger screens (Responsive Design) */
+@media (min-width: 768px) {
+  .contact-info {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-item {
+    font-size: 1.5rem;
+    margin: 0 15px;
+  }
 }
 
 /* Footer */
