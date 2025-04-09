@@ -56,7 +56,7 @@ body {
 /* Content Grid */
 .image-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid */
+  grid-template-columns: repeat(4, 1fr); /* Flexible grid */
   gap: 20px;
   justify-items: center;
   margin: 40px auto;
@@ -151,6 +151,82 @@ body {
   to {
     opacity: 1;
   }
+}
+
+/* Om Mig Section */
+#OmMig {
+  background-color: #f1f1f1;
+  padding: 60px 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+#OmMig h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0b1f66;
+  text-align: center;
+  font-weight: 700;
+}
+
+.section-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 900px;  /* Ensuring it doesn't stretch too wide */
+  margin-left: auto;
+  margin-right: auto; /* Centering the content */
+}
+
+.section-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.section-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  font-weight: 300;
+}
+
+.section-content:hover {
+  background-color: #f9f9f9; /* Light hover effect */
+}
+
+.section-content h3, .section-content p {
+  margin-bottom: 15px;
+}
+
+/* Content Section Styling */
+.content-section {
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  margin-top: 50px;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Add subtle shadow effect to the entire section */
+.content-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  color: #0b1f66;
+  margin-bottom: 20px;
 }
 
 /* Video Section */
